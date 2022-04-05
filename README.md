@@ -32,4 +32,10 @@ tsc <<TypeScript filename>>
 
 The command above will compile a TypeScript file into a JavaScript file, with the same name.
 
+To have the TypeScript file watched and automatically update the JavaScript file with any changes made, we can use the _'-w'_ flag.
+
+```
+tsc script.ts -w
+```
+
 ---
