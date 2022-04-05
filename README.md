@@ -11,3 +11,25 @@
 - TypeScript also comes with it own set of additional features like generics, interfaces, tuples etc.
 
 ---
+
+## **How to install and compile TypeScript ???**
+
+To insall TypeScript, you will first need Node.js installed to allow the use of the _Node Package Manager (npm)_.
+
+### **Installing TypeScript Globally**
+
+```
+npm install -g typescript
+```
+
+Browsers typically by default won't read TypeScript files and they will need to be compiled into JavaScript files. Even if the code is _EXACTLY_ the same !
+
+### **Compiling a TypeScript file**
+
+```
+tsc <<TypeScript filename>>
+```
+
+The command above will compile a TypeScript file into a JavaScript file, with the same name.
+
+---
