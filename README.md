@@ -69,3 +69,45 @@ const calculateCircumference = (diameter: number) => {
 ```
 
 ---
+
+## **Arrays and Objects**
+
+Similar to variables having strict data types when being assigned a value, Arrays and Objects work the same way.
+
+An Array of strings can have a value re-assigned to another string, but cannot have a different data type like a number or a boolean. If we wanted to have an that has mixed data types, the values need to be assigned when the array is declared.
+
+- Arrays
+
+```
+let names = ['mario', 'luigi', 'yoshi']
+names[0] = 'princess peach'   // This is acceptable
+names[1] = 45                 // This will flag an error, not matching data type
+```
+
+If an array is declared with mixed data types, then those data types are acceptable.
+
+```
+let mixed = ['mario', 1, 'yoshi', 2, 3]
+mixed[0] = 45
+mixed[1] = 'toad'   // No errors
+```
+
+The logic also applies to objects, once an object has been created with properties. The data types for those properties are strictly set and cannot be changed.
+
+```
+let person = {
+  name: 'harry',
+  age: 32,
+  gender: 'male'
+}
+
+person.name = 'luigi'   // No errors
+person.age = 'forty'    // Error, not matching data type
+
+person = {
+  name: 'harry',
+  age: 32,              // Error ALL object properties must be set
+}
+```
+
+---
