@@ -139,3 +139,25 @@ const addShipping = (price: number, shipping: number): number => {
   return price + shipping;
 };
 ```
+
+---
+
+## **Union Types**
+
+Sometimes when declaring the types of our variables, we maybe be willing to accept multiple types. When this is the case we can assign union types.
+
+Here we have declared a variable, but have not set a type. But perhaps, we are willing to accept this variable as either a number or a string.
+
+```
+let wooptyWoop;
+
+```
+
+Variable with a _number OR string_ Union type annotation.
+
+```
+let wooptyWoop: number | string = 'hello';
+wooptyWoop = 10000;
+```
+
+---
