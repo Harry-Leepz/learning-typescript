@@ -111,3 +111,31 @@ person = {
 ```
 
 ---
+
+## **Data Annotations**
+
+With TypeScript we are able to annotate the types of our variables / functions / parameters to avoid running into issues.
+
+Here is a simple function that adds the cost of shipping to the price. But we haven't specified the type of the parameters, which could potentially cause issues if the function is called with arguements that are strings instead of numbers.
+
+```
+const addShipping = (price, shipping) => {
+  return price + shipping;
+};
+```
+
+With Data Annotations - Now we have declared the parameters in our functions MUST be of type number, else the code will not compile.
+
+```
+const addShipping = (price: number, shipping: number) => {
+  return price + shipping;
+};
+```
+
+We can also annotate functions to declare the type the data must be returned.
+
+```
+const addShipping = (price: number, shipping: number): number => {
+  return price + shipping;
+};
+```
