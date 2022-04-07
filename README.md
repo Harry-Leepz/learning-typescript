@@ -150,7 +150,6 @@ Here we have declared a variable, but have not set a type. But perhaps, we are w
 
 ```
 let wooptyWoop;
-
 ```
 
 Variable with a _number OR string_ Union type annotation.
@@ -159,5 +158,63 @@ Variable with a _number OR string_ Union type annotation.
 let wooptyWoop: number | string = 'hello';
 wooptyWoop = 10000;
 ```
+
+---
+
+## **Interfaces and Objects :D**
+
+Imagine adding annotations to objects, to data types for propeties.
+
+Here is a basic object with two properties.
+
+```
+const person = {
+  name: 'Harry',
+  age: 32
+};
+```
+
+Now let us add some data annotations to this object.
+
+```
+const person: {
+  name: string,
+  age: number
+} = {
+  name: 'Harry',
+  age: 32
+};
+```
+
+The object is starting to get a little long and messy. This is where the wonders of interfaces comes in to make our lives easier, and code easier to read. :D
+
+Firstly lets create an interface for our person object. Interfaces begind with the **interface** keyword, followed by the name. Typically names start with a capital i and then the name in Pascal case.
+
+Inside the interface we se our data annotations, the isSingle property is optional and has a question mark to show this.
+
+```
+interface IPerson {
+  name: string,
+  age: number,
+  isSingle?: boolean
+};
+```
+
+Finally let us implement the interface with our object.
+
+```
+interface IPerson {
+  name: string,
+  age: number,
+  isSingle?: boolean
+};
+
+const person: IPerson = {
+  name: 'Harry',
+  age: 32,
+};
+```
+
+Simplezz :D
 
 ---
