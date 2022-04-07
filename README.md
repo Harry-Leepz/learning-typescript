@@ -218,3 +218,72 @@ const person: IPerson = {
 Simplezz :D
 
 ---
+
+## **Generics -.-**
+
+Generics allow us to make class's more flexible and strict at the same time.
+
+Let's start by making a class.
+
+```
+class Queue {
+  private data = [];
+
+  add(item) {
+    this.data.push(item);
+  }
+
+  remove() {
+    this.data.shift();
+  }
+}
+```
+
+Our class is basic and simple.
+
+- It has a private data property that is an array.
+- It has an add method that allows us to add an item to the data array.
+- It has a remove method that removes the first item in the array.
+
+The flaw we have at the moment is **'item'**, does not have a data type. And if we set a data type, we limit the flexibility of the method.
+
+This is where Generics come in, it allows us to set placeholders, so that we can assign the data type when we call the methods.
+
+Let's add Generics to the class we created :D
+
+```
+class Queue<T> {
+  private data: T[] = [];
+
+  add(item: T) {
+    this.data.push(item);
+  }
+
+  remove() {
+    this.data.shift();
+  }
+}
+
+```
+
+Here we have added the < T > data type on this class, and it acts as a placeholder.
+
+- The generic is added at the class name.
+- As a array data type.
+- As the data type for the item parameter.
+
+Now let us create some Queue's from the class we made.
+
+```
+const nameQueue = new Queue<string>();
+nameQueue.add('Harry');
+nameQueue.add('Larry');
+
+const numberQueue = new Queue<number>();
+numberQueue.add(27);
+numberQueue.add(32);
+```
+
+Notice how the 2 instances of the Queue we made have two seperate data types. That is the power of using Generics. rather than having two separete class's with a bunch of repeated code for different data types, we can save ourself time by just using Generics.
+
+---
